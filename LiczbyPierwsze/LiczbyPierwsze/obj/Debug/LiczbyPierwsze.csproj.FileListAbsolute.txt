@@ -1,0 +1,7 @@
+D:\PROJEKTY\C#\LiczbyPierwsze\LiczbyPierwsze\bin\Debug\LiczbyPierwsze.exe.config
+D:\PROJEKTY\C#\LiczbyPierwsze\LiczbyPierwsze\bin\Debug\LiczbyPierwsze.exe
+D:\PROJEKTY\C#\LiczbyPierwsze\LiczbyPierwsze\bin\Debug\LiczbyPierwsze.pdb
+D:\PROJEKTY\C#\LiczbyPierwsze\LiczbyPierwsze\obj\Debug\LiczbyPierwsze.csprojResolveAssemblyReference.cache
+D:\PROJEKTY\C#\LiczbyPierwsze\LiczbyPierwsze\obj\Debug\LiczbyPierwsze.csproj.CoreCompileInputs.cache
+D:\PROJEKTY\C#\LiczbyPierwsze\LiczbyPierwsze\obj\Debug\LiczbyPierwsze.exe
+D:\PROJEKTY\C#\LiczbyPierwsze\LiczbyPierwsze\obj\Debug\LiczbyPierwsze.pdb
