@@ -1,0 +1,7 @@
+D:\PROJEKTY\C#\Kolko_i_krzyzyk\Kolko_i_krzyzyk\bin\Debug\Kolko_i_krzyzyk.exe.config
+D:\PROJEKTY\C#\Kolko_i_krzyzyk\Kolko_i_krzyzyk\bin\Debug\Kolko_i_krzyzyk.exe
+D:\PROJEKTY\C#\Kolko_i_krzyzyk\Kolko_i_krzyzyk\bin\Debug\Kolko_i_krzyzyk.pdb
+D:\PROJEKTY\C#\Kolko_i_krzyzyk\Kolko_i_krzyzyk\obj\Debug\Kolko_i_krzyzyk.csprojResolveAssemblyReference.cache
+D:\PROJEKTY\C#\Kolko_i_krzyzyk\Kolko_i_krzyzyk\obj\Debug\Kolko_i_krzyzyk.csproj.CoreCompileInputs.cache
+D:\PROJEKTY\C#\Kolko_i_krzyzyk\Kolko_i_krzyzyk\obj\Debug\Kolko_i_krzyzyk.exe
+D:\PROJEKTY\C#\Kolko_i_krzyzyk\Kolko_i_krzyzyk\obj\Debug\Kolko_i_krzyzyk.pdb
