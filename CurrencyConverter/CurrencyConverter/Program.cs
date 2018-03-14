@@ -13,9 +13,24 @@ namespace CurrencyConverter
 	{
 		static void Main(string[] args)
 		{
+			if (args.GetLength(0)!=3)
+			{
+				Console.WriteLine("Niewłaściwa ilość argumentów");
+				Console.ReadKey();
+				Environment.Exit(1);
+			}
 			CurrencyDataManagment first = new CurrencyDataManagment(args[0]);
 			CurrencyDataManagment second = new CurrencyDataManagment(args[2]);
-			double amountOfMoneyToConvert = Convert.ToDouble(args[1]);
+			double amountOfMoneyToConvert = 0;
+			try
+			{
+				amountOfMoneyToConvert = Convert.ToDouble(args[1]);
+			} catch(FormatException)
+			{
+				Console.WriteLine("Zły format kwoty");
+				Console.ReadKey();
+				Environment.Exit(2);
+			}
 			Console.WriteLine("Kurs waluty " + first.CurrencySymbol + " wynosi: " + first.CurrencyValue);
 			Console.WriteLine("Kurs waluty " + second.CurrencySymbol + " wynosi: " + second.CurrencyValue);
 			Console.WriteLine(args[1] + " " + first.CurrencySymbol + " = " + Converter.Convert(amountOfMoneyToConvert, first, second) + " " + second.CurrencySymbol);
@@ -54,7 +69,7 @@ namespace CurrencyConverter
 			try
 			{
 				currencyJson = new WebClient().DownloadString(url);
-			} catch (System.Net.WebException exception)
+			} catch (System.Net.WebException)
 			{
 				Console.WriteLine("Zły format waluty");
 				Console.ReadKey();
