@@ -1,0 +1,450 @@
+﻿Komenda Cisco Catalyst IOS przeprowadzająca konsolę z trybu nieuprzywilejowanego do trybu exec	enable (skrót: en)
+Numery przewodów, które należy zamienić miejscami aby otrzymać kabel z przeplotem	1,2 <-> 3,6
+Protokół drugiej warstwy pracujący w przełącznikach Ethernet i zabezpieczający sieć przed powstaniem pętli	stp		
+Nazwa numeru portu przełącznika Ethernet, który zgodnie z nomenkulaturą protokołu STP prowadzi do Root Bridge	Root Port
+Adres sieci, w której znajduje się host 120.121.1.1 przy masce 255.254.0.0	120.120.0.0
+Komenda CCIOS przeprowadzająca konsolę z trybu exec do trybu umożliwiającego konfigurację ustawień	configure terminal (conf t)	Liczba maksymalna hostów możliwa do zdefiniowania w sieci 200.200.200.0 przy mascie 255.255.255.192	62   <=2^(4*8-26)-2
+Nazwy kategorii linii komunikacyjnych (line) definiowanych w systemie CCIOS	vty/console	
+Angielski odpowiednik słowa: przepustowość dla łącza sieciowego	throughput
+Koncentrator Ethernet nie dokonujący analizy adresów MAC (zawsze rozgłaszający)	hub	
+Nazwa pola/liczby identyfikującej format danych przenoszonych w ramce Ethernet II	Ethertype/długość
+Liczba bitów o wartości 0 w masce adresu IPv4 w notacji CIDR: 200.200.200.1 i masce 255.255.255.0	8
+MTU dla danych ramki Ethernet	1500 bajtów
+Nazwa protokołu konfigurującego adresy IP hostów w sieci	DHCP
+Liczba bitów w adresie Ethernet MAC	48
+Tryb transmisji w medium dopuszczający obydwa kierunki przepływu danych jednocześnie	duplex		
+Liczba bitów w adresie Ethernet IP	32
+Nazwa piątej warstwy modelu ISO OSI	sesji
+Adres IP Broadcast dla sieci IPv4: 10.0.0.0 przy masce 255.128.0.0	10.127.255.255
+Angielski odpowiednik terminu: Szerokość pasma	bandwidth
+Przykład systemu kodowania serii bitów zapewniającego samo-synchronizację transmisji	Kodowanie Manchester, kodowanie Manchester-różnicowy	
+Tryb transmisji umożliwiający ruch tylko w jednym kierunku	simplex
+Minimalna długość ramki Ethernet IEEE 802.3 (w bajtach)	64 bajty + 8 preambuły i SFD		
+Dwie techniki transmisji strumienia bitów rozróżniane z uwagi na obecność (lub nie) przekazu informacji zegarującej	
+Komunikacja synchroniczna i asynchronicznaRozwinięcie akronimu MTU jako cechy określającej możliwości techniczne technologii transmisji sieciowej	Maximum Transmission Unit
+Nazwa drugiej warstwy ISO OSI	łącza danych
+Adres segmentu sieci IPv4, do której należy host o adresie IPv4: 10.10.10.10 przy masce 255.255.192.0	10.10.0.0
+Maksymalna długość kabla TP Cat5 (skrętki) pomiędzy przełącznikami w technologii Ethernet	100 metrów
+Nazwa pola/liczby identyfikującej format danych przenoszonych w ramce Ethernet II	Ethertype
+Długość adresu MAC dla Ethernet (w bajtach)	6
+Adres IP broadcast dla sieci IPv4: 10.10.0.0 przy masce 255.255.0.0	10.10.255.255Rodzaje portów zapasowych w stanie discarding określane przez protokół RSTP w przełącznikach Ethernet (IEEE 802.1w)	Alternate port;  backup port;
+Jednostka, w której określona jest szerokość pasma dla danego medium transmisyjnego	bps (bits per second)
+Liczba możliwych stanów portu Ethernet w przełączniku (bez uwzględniania definiowanych przez STP i jego warianty)	5 - Listening, Learning, Forwarding, Blocking, Discarding //A nie 4, bo discarding to chyba RSTP definiuje?																						
+1. Funkcja protokołu VTP usuwająca VLAN Trunks, gdy dany VLAN w zadanym przełączniku nie ma żadnych portów	Pruning																						
+2. Wartość identyfikatora(VID) domyślnej sieci VLAN w przełącznikach Cisco( przy ustawieniach fabrycznych)	1 ??? Tak, slajd 21 z drugiej prezentacji																						
+3. Minimalna długość ramki Ethernet IEEE 802.3(w bajtach)	64(?)																						
+5. Klasa adresu IPv4:200.200.200.1	Klasa C																						
+6. Komenda Cisco Catalyst iOS przeprowadzająca przełącznik do trybu konfiguracji vlan numer 3	interface vlan 3																						
+7. Technologia Ethernet umożliwiająca tunelowanie wielu VLAN TRUNK w jednym łączu	802.1 Q-in-Q																						
+8. Rodzaj światłowodu umożliwiającego przesyłanie  jednocześnie tylko jednej wiązki światła danej częstotliwości	jednomodowy																						
+9. Adres IP broadcast dla sieci IPv4: 10.10.0.0/16        	10.10.255.255																						 
+10. Maksymalna długość ramki IEEE 802.1Q	1522B 																						
+11. Komenda Cisco Catalyst definiująca tryb pracy przełącznika jako trunk IEEE 802.1Q	Switch(config-if)#switchport mode trunk																						
+12. Rodzaje portów zapasowych  stanie discarding  określane przez protokół RSTP w przełącznikach Ethernet (IEEE 802.1w)	Alternate Port, Backup Port																						
+3. Tryb transmisji, umożliwiający ruch tylko w jednym kierunku	Simplex																						
+4. Minimalna długość ramki Ethernet IEEE 802.3 (w bajtach)	64  + 8 preambuły i SFD																						
+5. Protokół umożliwiający konwersję adresu IP zdalnej stacji na jej adres MAC w Ethernet	ARP																						
+7. Komenda Cisco Catalyst IOS przeprowadzająca przełącznik do trybu konfiguracji vlan numer 3	interface vlan 3 //raczej samo vlan3,int vlan3 tworzy interfejs																						
+8. Nazwa drugiej warstwy ISO OSI	łącza danych																						
+10. Maksymalna długość kabla TP Cat 5 (skrętki) pomiędzy przełącznikami w technologii Ethernet	100m																						
+11. Nazwa pola/liczby identyfikującej format danych przenoszonych w ramce Ethernet II	ethertype																						
+12. Długość adresu MAC dla Ethernet (w bajtach)	6																						
+13. Adres IP Broadcast dla sieci IPv4 10.10.0.0/16	10.10.255.255.																						
+15. Technologia Ethernet umożliwiająca tunelowanie wielu VLAN TRUNK w jednym złączu fizycznym	Q-in-Q																						
+16. Komenta CCIOS definiująca tryb pracy przełącznika jako trunk IEEE 802.1Q	switchport mode trunk																						
+18. Liczba możliwych stanów portu Ethernet w przełączniku (bez uwzględniania definiowanych przez STP i jego warianty)	5 - Listening, Learning, Forwarding, Blocking, Discarding //A nie 4, bo discarding to chyba RSTP definiuje?																						
+1. Maksymalna długość pakietu Ethernet	1518 - ej ej, a nie 1522??																						
+2. Tryb transmisji w medium dopuszczającym obydwa kierunki przepływu danych	Duplex																						
+3. MTU dla danych ramki Ethernet	1500																						
+4. Adres sieci IPv4, w której znajduje się host 100.100.13.10/23	100.100.12.0																						
+5. Adres broadcast IPv4 dla sieci, w której znajduje się host 120.134.12.10/16	120.134.255.255																						
+6. Teoretyczna liczba hostów możliwych do umieszczenia w sieci IPv4 10.10.10.0/29	6																						
+7. Wartość adresu rozgłoszeniowego MAC w Ethernet(hex)	ff:ff:ff:ff:ff:ff																						
+8. Rodzaje topologii logicznej sieci komputerowej	rozgłaszania/przekazywania tokenu																						
+9. Liczba bitów przeznaczona na VID w VLAN (IEEE 802.1Q)	12																						
+10. Nazwa portu publicznego (do którego każdy inny ma dostęp) definiowanego w Private VLANs przełącznika Ethernet	Promiscuous																						
+11. Nazwa pierwszej warstwy modelu ISO OSI	Fizyczna																						
+12. Komenda CCIOS trybu config aktywująca tryb konfigurowania linii terminali wirtualnych o numerach 0-4	line vty 0 - 4 (spacje koło myślnika!!) -- ŹLE!!!! ma byc "line vty 0 4" (sama spacja) - sprawdzane w CPT - jest w sprawku 022																						
+13. Nazwy dwóch podwarstw 2 warstwy ISO OSI	LLC MAC																						
+14. Nazwa standardu określająca tagowanie sieci VLAN	802.1Q																						
+15. Max wartość VLAN ID	4096//a nie 4095?? (pomijając fakt, że jest ono zarezerwowane do innych celów)  - raczej 4095																						
+16. Liczba bitów w adresie IPv4	32																						
+17. Komenda CCIOS określająca tryb pracy portu Ethernet jako obsługującego pojedynczego hosta (np PC)	switchport mode access																						
+18. Przynajmniej dwie kategorie kabla Twisted Pair	5/5e/6																						
+1. Adres sieci IPv4, w której znajduje się host 100.100.12.10/16	100.100.0.0																						
+2. Adres broadcast IPv4 dla sieci, w której znajduje się host 120.134.12.10/16	120.134.255.255																						
+3. Maksymalna liczba hostów przy masce 255.255.252.0	2^10 - 2 = 1022																						
+4. Topologia sieci Ethernet oparta o jeden koncentrator (przełącznik)	Gwiazdy																						
+6. Tryb transmisji umożliwiający przekaz danych w obie strony ale nie jednocześnie	Half-duplex																						
+8. Limit długości kabla Twisted Pair Cat5e w sieci Ethernet	100m																						
+9. Nazwa portu wyłączonego z powodu wykrycia pętli fizycznej przez proces STP w instalacji Ethernet opartej o przełączniki	blocking port																						
+10. Znaczenie preambuły wysyłanej przed ramką Ethernet	Synchronizacja																						
+11. Wariant sieci Ethernet VLAN, gdzie połączenie izolowane wielu VLAN w dwóch przełącznikach wielu kabli TP	port based																						
+12. Z czego budowany jest identyfikator Bridge-ID przesyłany w ramkach BPDU definiowanych przez protokół STP (802.1d)	bridge priority + MAC																						
+13. Teoretyczna liczba hostów możliwych do podłączenia do sieci IPv4 10.10.10.0/25	126																						
+14. Wartość najwyższego priorytetu Class of Service w IEEE 802.1p	7																						
+15. Tryb pracy VTP, w którym datagramy są jedynie przekazywane dalej	Transparent																						
+16. Scalenie kilku łącz TP pomiędzy przełącznikami Ethernet w jeden kanał o zwielokrotnionej przepustowości	EtherChannel																						
+17. Dowolny przykład notacji CIDR adresu IP	1.1.1.1/1																						
+18. Komenda CCIOS aktywująca tryb pracy trunk portu przełącznika Ethernet	switchport mode trunk																						
+1. Adres sieci IPv4, w której znajduje się host 120.134.12.10/16	120.134.0.0																						
+2. Adres broadcast IPv4 dla sieci, w której znajduje się host 120.134.12.10/8	120.255.255.255																						
+3. Maksymalna liczba hostów przy masce 255.255.224.0	 (255-224+1)*(255+1)-2=8190 ? ##																						
+4. Komenda CCIOS umożliwiająca zdefiniowanie rozpoznawalnej w sieci nazwy przełącznika Cisco Catalyst	hostname?																						
+5. Informacja dołączona na końcu pakietu/datagramu analogiczna znaczeniowo do nagłówka	Trailer																						
+6. Adres broadcast IPv4 dla sieci, w której znajduje się host 120.134.12.10/16	120.134.255.255																						
+8. Nazwa protokołu zdalnie konfigurującego adresy IP hostów w sieci	DHCP																						
+9. W jakim rodzaju pamięci wewnętrznej przełącznika Ethernet Cisco trzymany jest trwale obraz jego systemu operacyjnego	flash? (a nie NVRAM?)																						
+10. Komenda CCIOS umożliwiająca przypisanie listy kontrolnej (ACL) numer 5 do portu lub linii przełącznika	Ruter(config-if)#ip access-group 5 in // Ruter(config-line)#access-class 5 in																						
+11. Topologia sieci Ethernet oparta o jeden koncentrator(przełącznik)	Gwiazdy																						
+12. Nazwa wtyku stosowanego do łączenia portów Ethernet w przełącznikach z użyciem kabla TP	RJ45(8p8c)																						
+14. Nazwa siódmej warstwy ISO OSI	Aplikacji																						
+15. Komenda CCIOS umożliwiająca wyświetlenie danych zgromadzonych w ramach protokołu STP	show spanning-tree																						
+16. W jakim rodzaju pamięci przełączniki Ethernet Cisco zapisują swoją konfigurację	flash 																						
+17. Adres sieci IPv4, w której znajduje się host 130.130.130.10/8	130.0.0.0 																						
+18. Maksymalna liczba hostów w sieci o masce 255.255.255.255	1 (tak, maska jest prawidłowa)																						
+1. Podać maksymalną długość pakietu IP. 	64kB																						
+5. Nazwa nieistniejącego fizycznie interfejsu IP zakładanego w ruterze Cisco w celach diagnostycznych	loopback																						
+1. Wariant sieci Ethernet VLAN, gdzie połączenie izolowane wielu VLAN w dwóch przełącznikach wymaga wielu kabli TP	port based																						
+2. Co określa standard IEEE 802.1ad	Technikę tunelowania wielu VLAN Trunks w jednym łączu fizycznym (Q-in-Q)																						
+3. Nazwa portu Ethernet wybranego przez STP jako aktywny, gdy inne porty też są podłączone do tego samego segmentu sieci	designated port																						
+4. Dwa podstawowe rodzaje sieci VLAN	tagged, port-based																						
+5. Nazwa nieistniejącego fizycznie interfejsu IP zakładanego w ruterze Cisco w celach diagnostycznych	loopback																						
+6. Zbiór wszystkich hostów z sieci 200.200.0.0/16 zapisany w notacji stosowanej przy definiowaniu ACL w Cisco IOS	200.200.0.0    0.0.255.255																						
+7. Proces polegający na upakowaniu datagramu w innych datagramach - przenoszony w niższej warstwie ISO OSI	enkapsulacja																						
+8. Zakres identyfikatorów standardowych list dostępu (ACL) w Cisco IOS	1-99																						
+9. Tryb funkcjonowania łącza HDLC angażujący jest jeden terminal primary i jeden lub więcej terminali secondary	unbalanced																						
+Skrót literowy określający listy kontroli dostępu w routerach i przełącznikach Cisco	ACL																						
+Nazwa portu Private VLAN umożliwiającego wyłącznie komunikowanie z portem Promiscuous	Isolated Port																						
+Rodzaje list kontrolnych (ACL) w Cisco IOS	Standardowe \ Rozszerzone \ Nazwane																						
+Nazwa komunikatu ICMP wysyłanego do nadawcy dużej liczby datagramów IP w celu chwilowego wstrzymania ich nadawania	Source Quench																						
+Przynajmniej dwa zmodyfikowane warianty STP stosowane w przełącznikach Ethernet	RSTP, MSTP																						
+Rozszerzenie Cisco protokołu iGRP	EiGRP																						
+Typ rutowania IP, w którym nastąpi rozgłoszenie datagramu IP do ściśle określonej puli zarejestrowanych odbiorców	Multicast																						
+Wartość metryki Administrative Distance w tablicy rutowania IP wyznaczana dla sieci bezpośrednio podłączonych	0																						
+ Nazwa rutera wyprowadzającego ruch z domeny OSPF do innego Systemu Autonomicznego (AS)	ASBR - Autonomous System Border Router																						
+Maksymalna długość trasy (liczba przeskoków przez rutery) tworzonej w protokole RIP	15																						
+Komenda Cisco IOS umożliwiająca sprawdzenie zawartości tablicy rutowania w ruterze Cisco	show ip route																						
+Nazwa rutera OSPF przekazującego informacje o trasach pomiędzy obszarami (area) OSPF	ABR - Area Border Router																						
+Wartość Administrative Distance w tablicy rutowania routera Cisco dla iBGP	200																						
+Nazwa obszru (area) w rutowaniu dynamicznym IP OSPF, który nie otrzymuje informacji spoza domeny OSPF	Stub area																						
+Nazwa procesu przekazywania wiedzy o trasach pomiędzy różnymi protokołami rutowania dynamicznego	Redystrybucja																						
+Komenda umożliwiająca wyłączenie trybu routowania IP, który bierze pod uwagę klasy adresów IPv4	ip classless																						
+Komenda Cisco umożliwiająca przejście do trybu konfigurowania interfejsu FastEthernet nr 0 bezpośrednio w chassis rutera	int fa0/0																						
+Wartość liczbowa identyfikatora głównego obszaru (area) w domenie OSPF - tzw. backbone area	0																						
+1. Liczba możliwych klas CoS (IEEE 802.1p) w VLAN	8																						
+2. Z czego składa się identyfikator BID (Bridge-ID) przesyłany w ramkach BPDU definiowanych przez protokół STP (802.1d)	bridge priority + MAC																						
+3. Numer typu komunikatu OSPF LSA służący do rozgłaszania informacji o ścieżkach w lokalnym obszarze (area)	2																						
+4. Podział protokołów rutowania dynamicznego pod kątem technik wyznaczania tras i składowania informacji o nich	link state i distance vector																						
+5. Tryb rutowania IP, w którym nastąpi rozgłoszenie datagramu IP do ściśle określonej puli zarejestrowanych odbiorców	multicast																						
+6. Ogólna nazwa metody blokowania ogłaszania wstecznego w celu eliminowania zapętleń rutowania distance vector	split horizon																						
+7. Nazwa komunikatu rozgłaszanego w ramach OSPF przekazującego informację o ścieżce	LSA																						
+8. Komenda CCIOS definiująca tryb pracy portu Ethernet przełącznika jako "port podłączony do stacji PC"	switchport mode access																						
+9. Zakres adresów IPv4 w klasie B	128.0.0.0 - 191.255.255.255																						
+10. Ogólne określenie protokołów rutowania dynamicznego wewnątrz Systemy Autonomicznego	IGP																						
+11. Minimalna kategoria kabla TP (Twisted Pair) dla Gigabit Ethernet	5e																						
+12. Przynajmniej trzy typy wtyków światłowodowych	SC,LC,ST																						
+13. Alternatywa dla protokołu HDLC	PPP																						
+14. Po której stronie łącza V.35 serial należy dostarczyć zegar	DCE																						
+15. Nazwa kabla konsoli Cisco z dwoma wtykami RJ45 i przeplotem	Cisco Console RollOver //chyba																						
+17. Co wyraża wartość pola Time To Live w nagłówku datagramu IP	liczba przeskoków, no TTL																						
+18. Maksymalna wartość pola TTL w nagłówku datagramu IP	255																						
+19. Maksymalna długość ramki IEEE 802.3 (w oktetach)	1518																						
+20. Nazwa (identyfikator) rutera OSPF przekazującego informację o trasach poza domenę OSPF	ASBR																						
+21. W których warstwach modelu OSI operuje urządzenie: ruter IP	moim zdaniem sama 3 (1-3, pytałem się Turka)																						
+22. Przynajmniej 3 rodzaje topologii sieci komputerowej	liniowa, gwiazdy, magistrali																						
+23. Nazwa dowolnego protokołu obsługującego w warstwie 2 łącze typu punkt-punkt (point-to-point)	SLIP																						
+24. Nazwa dowolnego komunikatu PDU w protokole SNMP	GetRequest																						
+25. Komenda CCIOS powodująca włączenie rutowania OSPF w ruterze Cisco	#router ospf id_ospf_process (1..65536)/ router ospf 150																						
+jakie  znaczenie ma SFD w ramce Ethernet?	synchronizacja(uznał taką odp) //SFD (Start Frame Delimiter) SFD jest sekwencją 8 bitów w postaci 10101011, która wskazuje na początek ramki Ethernet z danymi.																						
+Przynajmniej dwa tryby funkcjonowania IP protocol independent multicast	PIM sparse mode, PIM dense mode																						
+Przynajmniej dwa komunikaty protokołu IGMP	"membership query", "membership report"																						
+Komenda CCIOS umożliwiająca włączenie routowania OSPF w routerze Cisco	#router ospf id_ospf_process (1..65536)/ router ospf 150																						
+Liczba grup IP multicast możliwa do utworzenia(nieczytelne słowo, ale chyba o to chodzi?) w ramach adresacji IPv4	2^28																						
+Zakres adresów grup IPv4 multicast	224.0.0.0-239.255.255.255																						
+Alternatywa dla protokołu IGMP stosowana w przypadku zarządzania grupami IPv6 multicast	MLD																						
+Komenda CCIOS umożliwiająca sprawdzenie zawartości tablicy routowania	show ip route																						
+Wariant OSPF, który umożlwia multicast	MOSPF																						
+Zapisz adres IPv6 6A2E:0:0:0:0:0:0:A25E w notacji skrótowej	6A2E::A25E																						
+Długość (liczba bitów) identyfikatora SLA w IPv6	16 bitów																						
+Wartość (w protokole IP) maksymalnego opóźniania dla dostarczenia pakietu IP do odbiorcy	brak ("Nie jest definiowane opóźnienie maksymalne – ewentualny timeout dla usługi określany jest w warstwach wyższych")																						
+Podział protokołów rutowania dynamicznego pod kątem technik wyznaczania tras i składowanie informacji o nich	link state, distance vector																						
+Wartość adresu IPv6 i maski (w odpowiedniej notacji) określająca wszystkie hosty w internecie	::/0																						
+Nazwa pierwszej warstwy Internet Protocol Suite	link																						
+Nazwa drugiej warstwy Internet Protocol Suite	internet																						
+Nazwa trzeciej warstwy Internet Protocol Suite	transport																						
+Nazwa czwartej warstwy Internet Protocol Suite	application																						
+Długość (liczba bitów) identyfikatora systemu autonomicznego (AS) rutowania IP	16																						
+Adres IPv6 będący odpowiednikiem adresu IPv4 1.255.0.254 w notacji IPv6-mapped-IPv4	::FFFF:1.255.0.254/96																						
+Nazwy dwóch klas obszarów definiowanych w protokole rutowania dynamicznego IS-IS	inter area, intra area																						
+Wartość (liczbowo) maski IPv4 1.1.1.1/27	255.255.255.224																						
+Ogólna nazwa protokołów rutowania dynamicznego operujących jednocześnie w wielu systemach autonomicznych (AS)	EGP																						
+Komenda Cisco IOS definiująca/aktywująca do edycji dowolnie wybrany podinterfejs w ruterze Cisco	int fa0/0.1																						
+Standard IEEE określający tagowanie VLAN	802.1Q																						
+Nazwa sieci IP podłączonej bezpośrednio do rutera	Sieć ościenna (directly connected network)																						
+Standardowy adres IPv4 wejścia do tunelu 6to4 (przy tunelowaniu IPv6 w IPv4)	192.88.99.1																						
+Ogólne określenie protokołów rutowania dynamicznego wewnątrz systemu autonomicznego	IGP																						
+Zakres unikatowych lokalnych nierutowalnych IPv6	FC00::/7																						
+Określenie rodzaju adresów IP stosowane w NAT dla adresów w datagramach w sieci prywatnej (inside)	local																						
+Rozwinięcie akronimu ARP jako protokołu sieciowego	adress resolution protocol																						
+Odpowiednik IPv4 adresu IPv6 0:0:0:0:0:0:0:1	127.0.0.1																						
+Wartość adresu autokonfiguracji IPv6 (nadawanego samoczynnie przez stację, np. przy braku dostępu do DHCP)	fe80::/10																						
+Długość (liczba bitów) identyfikatora EUI (Extended Unique Identifier) w IPv6	64																						
+Maksymalna długość drogi dla datagramów przetwarzanej przez protokół rutowania dynamicznego IP RIP	15																						
+Nazwa rutera OSPF łączącego dwa różne obszary (area) w domenie OSPF	Area border router																						
+Liczba bitów pola TTL w nagłówku datagramu IPv4	8																						
+Komenda Cisco IOS umożliwiająca sprawdzenie zawartości tablicy rutowania dla IPv6 w ruterze Cisco	show ipv6 route																						
+Komenda kasująca pamięć NVRAM rutera	write erase																						
+Wartość Administrative Distance dla eBGP	20																						
+Wzór do obliczenia metryki kosztu łącza w protokole OSPF	100Mbps/szybkość interfejsu																						
+Maksymalna liczba przeskoków przez rutery pomiędzy sąsiadami BGP w różnych AS (dla eBGP)	1																						
+Wartość (liczbowo) maski IPv4 1.1.1.1/26	255.255.255.192 (ostatni bajt: 128+64)																						
+Zakres indentyfikatorów AS BGP przeznaczony do diagnostyki i eksperymentów	65001-65535																						
+Określenie w technologii NAT dla adresów IP w datagramach IP przekazywanych przez sieci outside	global																						
+Nazwa komunikowania ruterów iGRP zakładające tworzenie wewnątrz AS połączeń (sesji) BGP "każdy z każdym"	Full mesh																						
+Wartośc adresu IPv6 i maski (w odpowiedniej notacji) określająca wszystkie hosty w Internecie	::/0																						
+Komenda Cisco IOS umożliwiająca wyłączenie uogólniania tras przekazywanych w protokołach rutowania dynamicznego	no ip summary-address NAZWA_PROTOKOŁU NUMER_AS IP MASKA																						
+Nazwa procesu przekazywania wiedzy o trasach pomiędzy różnymi protokołami rutowania dynamicznego	Redystrybucja																						
+Co zawiera Extended Unique Identifier w adresie IPv6?	zawiera MAC uzupełniony wartością 0xFFFE pośrodku np. 00:0C:29:FF:FE:0C:47:D5																						
+Technika umożliwiająca stworzenie relacji jeden-do-wielu pomiędzy adresami IP w NAT	overloading																						
+Nazwa techniki utrzymywania kilku alternatywnych tras BGP wychodzących z danego AS	multihoming																						
+Zapisz dowolny adres IPv6 w notacji EUI-64	1::/64 eui-64																						
+Nazwa techniki (w Cisco IOS) umożliwiającej wykorzystanie kontrolnych ACL do kontroli procesu rutowania dynamicznego	ROUTE-MAP																						
+Ruter iBGP mający prawo otrzymywania komunikatów o lokalnych trasach od rutera BGP Route Reflector (RR)	RRC - Route reflector client																						
+komenda wypisująca dla multicasta route (rutowanie)	show ip mroute																						
+Długość celki ATM (bajty)	53																						
+Nazwa interfejsu ATM tworzonego pomiędzy dwoma przełącznikami ATM	NNI																						
+Nazwa konstrukcji w iGBP zakładająca tworzenie wewnątrz AS połączeń BGP "każdy z każdym"	Full mesh																						
+Technika umożliwiająca w Cisco IOS stworzenie relacji jeden-do-wielu pomiędzy adresami IP w NAT	overloading																						
+Unikatowy identyfikator połączenia w technologii Frame Relay	DLCI																						
+Nazwa interfejsu ATM tworzonego pomiędzy przełącznikiem ATM a ruterem-bramką z sieci ATM	UNI																						
+Nazwa techniki definiowania kilku tras BGP z danego AS - z dopuszczeniem wyboru pomiędzy nimi	multihoming																						
+Nazwa techniki w Ciscio IOS umożliwiającej wykorzystanie ACL do kontroli procesu rutowania dynamicznego	route-map																						
+Długość pakietu UDP (coś takiego) 	65535`																						
+Co to jest gateway of last resort? 	Brama domyślna																						
+Adres CIDR dla SIECI IPv4 IP 100.100.100.1 255.255.0.0	100.100.0.0/16																						
+Europejski odpowiednik standardu T-Carrier	E-Carrier																						
+Komenda Cisco aktywująca w routerze routowanie BGP dla AS o wartości 100	router bgp 100																						
+Długość (w bitach) identyfikatora DLCI we Frame Relay	10 bitów?																						
+Nazwa komunikatu rozgłaszanego w OSPF przekazującego informację o ścieżce	LSA																						
+Adres IPv4 hosta znajdującego się w sieci 200.200.200.5/32	200.200.200.5																						
+Rozwinięcie akronimu SVC jako opisu połączenia logicznego w technologii ATM	Switched Virtual Circuit																						
+Wewnątrz jakiej jednostki logicznej agregowane są wirtualne kanały ATM	Virtual Path Connection (raczej Channel)																						
+Długość adresu AESA NSAP ATM	20 bajtów (odp w pytaniu)																						
+Parametry tras BGP, które można modyfikować w ramach route-maps	WEIGHT, LOCAL_PREFERENCE i MED																						
+Nazwa rutera iBGP umożliwiającego podzielenie AS na części w celu redukcji ilości sesji BGP	Route Reflector																						
+Parametr określający przepustowość gwarantowaną w danej chwili czasowej przez dostawcę - w technologii Frame Relay	CIR																						
+Wartość (w protokole IP) maksymalnego opóźnienia dla dostarczenia pakietu IP do odbiorcy	brak ("Nie jest definiowane opóźnienie maksymalne – ewentualny timeout dla usługi określany jest w warstwach wyższych")																						
+Liczba bitów w adresie IPv6	128																						
+Wariant protokołu BGP operujący pomiędzy AS	eBGP																						
+Nazwa dowolnego komunikatu PDU w protokole SNMP	GetRequest, GetNextRequest, ִSetRequest, GetResponse, Trap																						
+Rozwinięcie skrótu SDH	Synchronous Digital Hierarchy																						
+Dwa typy celek ATM w zależności od typu interfejsu ATM	UNI, NNI																						
+Nazwa typu interfejsu umożliwiającego zarządzanie modemem	Dialer																						
+Określenie w technologii NAT adresów IP w datagramach IP w sieci typu outside	global																						
+Nazwa obszaru (area) wyizolowanego w rutowaniu dynamicznym OSPF	stub area																						
+Ruter iBGP mający prawo otrzymywania komunikatów o lokalnych trasach od rutera BGP Router Reflector	RRC																						
+Dwa identyfikatory w ATM, służące do znajdywania ścieżki (adresu).	VCI i VPI																						
+Rozwinięcia skrótu MPoA jako technologii stosowanej w ATM	Multiprotocol over ATM																						
+rodzaje warstw ATM Adaptation Layers	5 wersji: AAL Type 0; AAL Type 1; AAL Type 2; AAL Type 3/4; AAL Type 5																						
+przynajmniej dwa sposoby na (...) cable modem (...)																							
+Nazwa typu interfejsu umożliwiającego zarządzanie modemem w Cisco IOS	Dialer																						
+Określenie używane wobec obudowy przełącznika segmentu CORE (gromadzącej wszelkie urządzenia składowe)	Chassis																						
+Port przeznaczony do obsługi VLAN TRUNK w przełącznikach Ethernet firmy HP	tagged																						
+Nazwa najbardziej istotnego atrybutu ścieżki BGP branego pod uwagę w ruterach Cisco	WEIGHT																						
+Nazwa systemu operacyjnego dla ruterów i przełączników firmy Extreme Networks	ExtremeWare OS																						
+20. Nazwa (identyfikator) rutera OSPF przekazującego informację o trasach poza domenę OSPF	ASBR																						
+Liczba warstw w modelu warstowym sieci SAN (Storage Area Network)	3 / raczej 5																						
+Interfejs telefonii analogowej, do którego podłączamy intefejs FXO	FXS																						
+Wariant protokołu BGP operujący pomiędzy AS	eBGP																						
+Rozwinięcie skrótu SDH jako technologii przekazywania danych w sieci WAN	Synchronous Digital Hierarchy																						
+Nazwa atrybutu BGP informującego o pochodzeniu informacji o prefiksie z iBGP, eBGP lub redystrybucji	ORIGIN																						
+Maksymalna wartość identyfikatora Systemu Autonomicznego w BGP	65535																						
+Nazwy dwóch klas obszarów definiowanych w protokole rutowania dynamicznego IS-IS	inter area, intra area																						
+Określenie techniki segmentacji sieci Fibre Channel przy pomocy przełączników SAN Fabric	zoning																						
+Maksymalna długość danych w ramce PDU Frame Relay	8188 bajtów																						
+Atrybut ścieżki BGP definiowany dla konkretnego rutera i posiadający najwyższy priorytet	WEIGHT																						
+Długość nagłówka celki ATM	5 bajtów																						
+Technika skalowania iBGP zakładająca tworzenie fikcyjnych AS wewnątrz rzeczywistego AS w celu redukcji ilości sesji BGP	AS Confederations																						
+Komenda Cisco IOS sprawdzająca stan mapowań DLCI i interfejsów w tablicy rutowania Frame Relay	show frame-relay map/show frame-relay pvc																						
+Atrybut BGP umożliwiający ocenę w danym AS drogi z innego sąsiedniego AS	LOCAL_PREFERENCE																						
+Nazwa (określenie) centralnego modułu zarządzającego pracą przełączników Cisco z serii 4000, 5000, 6000 (segmentu CORE)	Supervisor																						
+Atrybut ścieżki BGP zawierający listę AS, przez które ścieżka przechodzi	AS_PATH																						
+Nazwa przynajmniej jednego systemu kodowania ramek LMI w technologii Frame Relay	cisco, ansi, q933a																						
+podaj 3 warstwy E-Carrier 	chyba  E1, E9, T1																						
+Nazwa dodatkowego modułu stosowanego w celu zwiększenia wydajności przęłączników segmentu CORE Cisco	Switch Fabric																						
+Parametry asocjacji TCP	Typ protokołu, adres i port węzła lokalnego, adres i port węzła zdalnego																						
+Identyfikatory w ATM	VCI, VPI																						
+Wymień 3 rodzaje kategorii / prędkości E-carrier	E2: multiplexing level 2: 8 Mbit/s, E3: multiplexing level 3: 34 Mbit/s,E4: multiplexing level 4: 140 Mbit/s																						
+Router MPLS wysyłający datagramy	Upstream Router																						
+Sieć VRF działająca bez MPLS	VRF Lite																						
+Protokoły używane do budowania VPN	PPTP, L2TP																						
+Cel użycia GRE (general routing encapsulation)	Łączenie zdalnych sieci stosujących protokoły inne niż IP, przesyłanie ruchu IPv6 przez sieć IPv4, przesyłanie ruchu szyfrowanego. (końcówka wykładu ROUTE (II)																						
+Proces uogólniania adresów sieci IP, do których z r(eguły?) prowadzi ta sama ścieżka, stosowany w rutowaniu (..?)	Route Summarization																						
+Komenda Cisco IOS umożliwiająca zdefiniowanie reguł rutowania statycznego	ip route\																						
+Komenda Cisco IOS powodująca aktywację procesu (..) RIP w ruterze Cisco	router rip nazwa																						
+Komenda Cisco IOS definiująca/aktywująca do edycji dowolnie wybrany pod-interfejs w ruterze Cisco	int fa0/0.1																						
+Dwie główne techniki poszukiwania tras w stosowanych protokołach rutowania dynamicznego IP	link-state, distance-vector																						
+Domyślna wartość Administrative Distance w tablicy rutowania dla statycznej reguły rutowania	1																						
+Alternatywa dla protokołu PPP, choć nie dostarczająca autentyfikacji węzłów sieci	HDLC																						
+Nazwa obszaru (area) wyizolowanego w rutowaniu dynamicznym OSPF	Stub area																						
+Liczba typów komunikatów LSA w protokole rutowania dynamicznego IP OSPF	6 głównych/11 w sumie																						
+Postać skrócona adresu IPv6 2:2:0:0:0:0:2:2	2:2::2:2																						
+Rozwinięcie akronimu ARP jako protokołu sieciowego	Address Resolution Protocol																						
+Odpowiednik IPv4 adresu ::/128 IPv6	0.0.0.0/32																						
+Rodzaj adresu, który w NAT służy do określenia hosta w sieci publicznej (sieci outside)	outside global																						
+Domyślna wartość metryki Administrative Distance dla protokołu rutowania dynamicznego RIP	120																						
+Postać skrócona adresu IPv6: 6A3E:A25E:0:0:0:0:0:0	6A3E:A25E::																						
+Wariant protokołu ICMP dostosowanego do obsługi IPv6	ICMPv6																						
+Długośc identyfikatora NLA w adresie IPv6 (liczba bitów)	24																						
+Komenda Cisco IOS powodująca uruchomienie rutowania IPv6 dla ruchu unicast	ipv6 unicast-routing																						
+Wariant protokołu rutowania dynamicznego RIP kompatybilnego w IPv6	RIPng																						
+Konstrukcja definiowana w Cisco IOS przypisywana do sąsiada BGP i umożliwiająca manipulowanie atrybutami tras	route-map																						
+W których wartwach modelu ISO OSI operuje przełącznik rutujący Ethernet	1 - 3 																						
+Co oznacza określenie Gateway of last resort w tablicy rutowania	Jest to domyślna trasa rutowania. Używana gdy jakiekolwiek inne nie będą pasować																						
+IPv6 adresu 127:0:0:1 IPv4	::1/128																						
+Adres Ipv6 adresy auto konfiguracji IPv4 (gdy host nie dostał adresu przez DHCP)	fe80::/10																						
+Wariant protokołu OSPF kompatybilny z IPv6	OSPFv3																						
+Nazwa komunikatu rozgłaszanego w ramach OSPF przekazującego informacje o ścieżce	LSA																						
+Adres IPv4 hosta znajdującego się w sieci 200.200.200.5/32	200.200.200.5																						
+Rodzaje ruterów OSPF wyróżniane w ramach pracy tego protokołu	ABR, Internal router, Backbone router, ASBR																						
+Nazwa trzeciej warstwy Internet Protocol Suite (to nie to samo co OSI)	transportowa																						
+Długość (liczba bitów) identyfikatora SLA w IPv6	16																						
+Wartość (w protokole IP) maksymalnego opóźniania dla dostarczenia pakietu IP do odbiorcy	brak ("Nie jest definiowane opóźnienie maksymalne – ewentualny timeout dla usługi określany jest w warstwach wyższych")																						
+Nazwa dowolnego komunikatu PDU w protokole SNMP	GetRequest, GetNextRequest, ִSetRequest, GetResponse, Trap																						
+Liczba bitów w adresie IPv6	128																						
+Nazwa najbardziej istotnego atrybutu ścieżki BGP branego pod uwagę w ruterach Cisco	WEIGHT																						
+Nazwa instytucji zajmującej się zarządzaniem Systemami Autonomicznymi i BGP w Europie	RIPE																						
+Długość (liczba bitów) identyfikatora Systemu Autonomicznego (AS) rutowania IP	16																						
+Adres IPv6 będący odpowiednikiem adresu IPv4: 1.254.0.254 w notacji IPv6-mapped-IPv4	0:0:0:0:FFFF:1.254.0.254/96																						
+Nazwy dwóch klas obszarów definiowanych w protokole routowania dynamicznego IS-IS	Level 1 intra-area, Level 2 inter-area																						
+Ogólna nazwa protokołów routowania dynamicznego operujących jednocześnie w wielu Systemach Autonomicznych (AS)	EGP (Exterior gateway protocol)																						
+Jak nazywamy sieć IP podłączoną bezpośrednio do routera	Directly connected network (sieć ościenna)																						
+Standardowy adres IPv4 wejścia do tunelu 6to4 (przy tunelowaniu IPv6 w IPv4)	192.88.99.1																						
+Zakres unikatowych lokalnych adresów nie routowalnych IPv6	fc00::/7																						
+Komenda Cisco IOS aktywująca w ruterze rutowanie BGP dla AS o wartości 100	router bgp 100																						
+Komenda Cisco IOS uruchamiająca funkcję przełącznika Frame Relay w ruterze Cisco	frame-relay switching																						
+Określenie używane wobec obudowy przełącznika segmentu CORE (gromadzącej wszelkie urządzenia składowe)	Chassis																						
+Wartość ipv4 i maski (w odpowiedniej notacji) określająca wszystkie hosty w internecie	0.0.0.0/0																						
+Jak nazywamy kodowanie bazujące na przenoszących informację zmianach stanu sygnału ? – np. zmiana stanu z L>H oznacza 1, a z H>L oznacza 0 ?	Manchester																						
+Jak dzielimy światłowody w zależności od możliwości przesyłania wielu sygnałów równocześnie lub tylko sygnału pojedynczego?	jednomodowe i wielomodowe																						
+Alternatywne nazwy procesu prefic aggregation (supernetting) prowadzonego podczas rutowania IP	route summarization albo route aggregation																						
+Parametry tras BGP, które można modyfikować w ramach route maps	WEIGHT, LOCAL_PREFERENCE i MED																						
+Komenda Cisco IOS włączająca funkcję mostka Ethernet z jednoczesną możliwością rutowania do niego	bridge <nr> route ip																						
+Wariant protokołu BGP operujący pomiędzy AS	eBGP																						
+Maksymalna wartość identyfikatora Systemu Autonomicznego w BGP	65535																						
+Nazwa rutera iBGP umożliwiającego podzielenie AS na części w celu redukcji ilości jednoczesnych sesji BGP	Route Reflector																						
+Dwa warianty protokołu BGP (operujący na zewnątrz i wewnątrz AS)	eBGP i iBGP																						
+Określenie dla obowiązkowych atrybutów ścieżki BGP	Powszechnie Obowiązkowe (Well-known Mandatory)																						
+Komenda Cisco IOS definiująca sąsiada BGP o adresie 1.1.1.1 w AS 5	neighbor 1.1.1.1 remote-as 5																						
+Dwie poznane techniki skalowania iBGP	AS Confederations, Route Reflector																						
+Wariant rutowania BGP wyłącznie wewnątrz jednego Systemu Autonomicznego	iBGP																						
+Rozwinięcie akronimu MED jako atrybutu ścieżki w BGP	Multi Exit Discriminator																						
+Nazwa techniki definiowania kilku tras BGP z danego AS z dopuszczeniem wyboru pomiędzy nimi	multihoming																						
+Nazwa atrybutu w komunikacie o trasie eBGP zawierającego listę AS, przez które trasa przechodzi	AS_PATH																						
+Nazwa grupy AS w BGP agregowanej w celu określenia tych AS zbiorczo wybranymi atrybutami	Community																						
+Nazwa atrybutu trasy BGP przypisanego do całego AS i określająca jakość połączenia z innymi AS	LOCAL_PREFERENCE																						
+Atrybut trasy BGP, który określa preferowaną trasę gdy dwa AS mają wiele połączeń i nie wiadomo które z nich wybrać	MED (Multi Exit Discriminator)																						
+Atrybut BGP umożliwiający ocenę w danym AS drogi z innego sąsiedniego AS	LOCAL_PREFERENCE (do sprawdzenia)																						
+Technika skalowania iBGP zakładająca tworzenie fikcyjnych AS wewnątrz rzeczywistego AS w celu redukcji ilości sesji BGP	AS confederations\																						
+Przynajmniej dwa rodzaje komunikatów w sesji BGP	open, update, notification, keepalive																						
+Jaką ma długość i z jakich części składa się adres typu Media Access Control	długość: 48 bitów Pierwsze 24 bity oznaczają producenta karty sieciowej, pozostałe 24 bity są unikatowym identyfikatorem danego egzemplarza karty																						
+Nazwa protokołu kontrolującego ruch multicast w sieciach IPv6	MLD (Multicast Listener Discovery)																						
+Podział technik rutowania IP pod kątem interpretowania (bądź nie) klas adresów IP	Classful: IGRP, RIP, Classless: RIPv2, OSPF, EIGRP																						
+Rozwinięcie akronimu AAL dla ATM	ATM Adaptation Layer																						
+Maksymalna liczba bajtów danych przekazywana w celce ATM	48 B (+ 5 nagłowek = 53 B)																						
+Nazwa składowej adresu AESA NSAP identyfikującej fizyczny interfejs będący wyjsciem z ATM	ESI																						
+Pole występujące w nagłówkach celu ATM UNI, lecz nie występujące w nagłówku celki ATM NNI	GFC																						
+Europejski odpowiednik standardu T-carrier	E-Carrier																						
+Przynajmniej dwa warianty techniki multiplexing	space-division, frequency-division, time-division (podobnie jak w falach radiowych)																						
+Długośc identyfikatora DLCI we Frame Relay (bity)	10																						
+Rozwinięcie akronimu SVC jako opisu połączenia logicznego w technologii ATM	switched virtual circuit																						
+Wewnątrz jakiej jednostki logicznej agregowane są wirtualne kanały ATM (ATM Virtual Channels)	VPC																						
+Długośc adresu AESA NSAP ATM	20 bajtów																						
+Nazwa sygnału testującego łącze T-carrier	BERT (Bit-Error Rate Test)																						
+Parametr określający przepustowośc gwarantowaną w danej chwili czasowej przez dostawcę w technologii Frame Relay	CIR																						
+Nazwa składowej adresu AESA NSAP identyfikującej fizyczny interfejs będący wyjściem z ATM	ESI																						
+Rozwinięcie skrótu SDH jako technologii przekazywania danych w sieci WAN	Synchronous Digital Hierarchy																						
+Nazwa atrybutu BGP informująca o pochodzeniu informacji o prefiksie z iBGP, eBGP lub redystrybucji	Origin																						
+Dwa typy celek ATM w zależności od typu interfejsu ATM	UNI,NNI																						
+Dowolny wybrany tryb adaptacji (Adaptive-shaping) przy informowaniu o przeciążeniach w Frame Relay	FECN/BECN																						
+Wariant adresu AESA NSAP ATM stosowany domyślnie w urządzenia Cisco	ICD																						
+Rozwinięcie akronimu PVC jako określenia obwodu sieci ATM	Permanent virtual circiut																						
+Nazwa ramki przekazywanej między przełącznikami w technologii Frame Relay	PDU																						
+Długość celki ATM (bajty)	53																						
+Nazwa intefejsu ATM tworzonego pomiędzy dwoma przełącznikami ATM	NNI																						
+Unikatowy identyfikator połączenia w technologii Frame Relay (w warstwie 2 ISO OSI)	DLCI																						
+Nazwa interfejsu ATM tworzonego pomiędzy przełącznikem ATM a routerem bramką z sieci ATM	UNI																						
+Długość identyfikatora DLCI we Frame Relay(bity)	10																						
+Wewnątrz jakiej jednostki logicznej agregowane są wirtualne kanały ATM (ATM Virtual Channel)	VPC (Virtual Path Connection)																						
+Długość identyfikatora VCI (Virtual Channel Identifier) w celce ATM	16 bitów																						
+Nazwa przynajmniej jednego systemu kodowania ramek LMI w technologii Frame Relay	cisco, ansi, q933a																						
+Maksymalna długość danych w ramce PDU Frame Relay	8188 bajtów																						
+Długość nagłówki celki ATM	5 bajtów																						
+Komenda Cisco IOS sprawdzająca stan mapowań DLCI i interfejsów w tablicy rutowania Frame Relay	show frame-relay map/show frame-relay pvc																						
+Skrót literowy określający usługę telefonii analogowej	POTS																						
+Interfejs telefonii analogowej do której podłączamy interfejs FXO	FXS																						
+Rozwinięcie akronimu CPE jako określenia strony komunikacji w asymetrycznym lub symetrycznym DSL	customer premises equipment																						
+Przynajmniej dwa rodzaje uwierzytelniania w protokole PPP	PAP,CHAP																						
+Określenie techniki segmentacji sieci Fibre Channel przy pomocy przełączników SAN Fabric	Zoning																						
+Nazwa (określenie) centralnego modułu zarządzania pracą przełączników Cisco z serii 4000, 5000, 6000 (segmentu CORE)	Supervisor																						
+Tryb pracy sieci SAN (Fibre Channel) oparty o fizyczną topologię pierścienia	Pętla z arbitrażem																						
+Nazwa portu przełącznika Fibre Channel używana do podłącznia do niego portów z innych urządzeń (serwerów)	Port F																						
+Nazwa dodatkowego modułu stosowanego w celu zwiększenia wydajności przęłączników segmentu CORE Cisco	Switch Fabric																						
+Nazwa (akronim) unikatowego identyfikatora urządzenia w sieciach Fibre Channel	WWNN, lub WWPN jeśli urządzenie ma parę portów FC																						
+Nazwa portu Fibre Channel przełącznika SAN (FC Fabric) służącego do połączenia z innymi przełącznikami SAN	Port E																						
+Długość adresu interfejsu fizycznego w ramkach FC-2 (Fibre Channel)	24																						
+Określenie karty zawierającej serię interfejsów sieciowych w przełącznikach Segmentu CORE	line card																						
+Nazwa urządzenia centralnego o które oparta jest topologia gwiazdy w sieciach SAN (Fibre Channel)	Switch Fabric																						
+Nazwa modułu sprzętowego w przełącznikach Ethernet Cisco używanego do wykrywania zagrożeń w ruchu sieci	IDS (Intrusion Detection System)																						
+Określenie dla techniki agregowania łączy w sieciach SAN (Storage Area Network) w celu zwiększenia przepustowości	Striping																						
+Liczba warstw w modelu warstwowym sieci SAN (Storeage Area Network)	3 / a nie 5?																						
+Opisz wyposażenie kabla typu SFTP (S/FTP). Podaj także rozszerzenie skrótu.	S/FTP (dawniej SFTP) –każda para przewodów otoczona jest osobnym ekranem z folii, cały kabel pokryty jest pancerzykiem../Shielded Foiled Twisted Pair																						
+W której warstwie OSI pracuje repaeater ?	fizycznej																						
+Standaryzowana jednostka wysokości urządzenia w RACK:	Unit. 1U = 1.75cala = 44,45 mm																						
+Nazwa technologii umożliwiającej przesyłanie danych z użyciem przewodów sieci energetycznej	PLC - power line communication																						
+Urzadzenie pasywne montowane w szafie krosowniczej RACK umożliwiające ręczne przełaczanie wtyków RJ45	Patch panel																						
+Wariant kabla TP montowanego w miejscach narażonych na zakłócenia elektromagnetyczne	SFTP																						
+Wartość MTU dla ramek IEE 802.11 bez uwzględnienia WEP	2304 bajtów																						
+Określenie trybu komunikowania w parach (czyli punkt punkt bez użycia Access Point ) stosowanego w IEEE 802.11	Ad hoc - IBSS (Independent Basic Service Set)																						
+Nazwa typu interfejsu umożliwiającego zarządzanie modemem	Dialer																						
+Co oznacza akronim SSID ww technologii IEEE 802.11	service set identifier																						
+Odpowiednik funkcjonalności CSMA/CD stosowany w standardzie IEEE 802.11	CSMA/CA (Carrier Sense Multiple Access / with Collision Avoidance)																						
+Zakres prędości transmisji (Mbps) dla standardu IEEE 802.11a	6-54Mb/s																						
+Rozwinięcie akronimu TKIP w standardzie IEEE 802.11	Temporal Key Integrity Protocol																						
+Przynajmniej trzy nazwy szyfrów symetrycznych (tj. używających klucza symetrycznego) stosowanych w technologiach sieciowych	AES DES IDEA																						
+Na czym polega pasywne skanowanie kanałów w IEEE 802.11	nasłuchiwanie ruchu ramek beacon kierowanych do stacji z przełączeniem skanowania na kolejne kanały																						
+Maksymalna liczba aktywnych stacji typu slave w jednej pikosieci Bluetooth (IEE 802.15)	7																						
+Moce urządzeń nadawczych kolejno w klasach 1,2,3 definiowanych w IEE 802.15 (Bluetooth)	100 mW, 2,5 mW, 1 mW																						
+Nazwa protokołu umożliwiającego nadbudowanie nad Bluetooth (IEEE 802.15) fragmentacji ramek i QoS	L2CAP																						
+Podaj wzór określający EIRP	EIRP = P - Tk + Gi gdzie EIRP i P (moc nadajnika) podane są w dBm, Tk (tłumienie kabla) w dB a Gi (zysk anteny w stosunku do anteny izotropowej) w dB																						
+Nazwa technologii definiowanej standardem IEEE 802.16	WiMAX (Worldwide Interoperability for Microwave Access)																						
+Rozmiar pola "numer sekwencji" w nagłówku TCP	32 bity																						
+Rodzaje urządzeń ZigBee	ZigBee Coordinator, ZigBee Router, ZigBee End Device																						
+EGZAMIN	ZEROWY 2015																						
+Nazwa trybu IP PIM push mode rutowania dynamicznego IP Multicast	PIM dense mode																						
+Jaką informację zawiera pojedynczy wpis w tablicy rutowania IPv4 Multicast?	???? Jak ktoś wie, niech odpowie w komentarzu																						
+Nazwa rutera IGMP czynnie kontrolującego obecność zarejestrowanych wcześniej odbiorców ruchu IP multicast	Querier																						
+Nazwa rutera centralnego (zarządzającego procesem rutowania w ramach protokołu ODR (On Demant Ruting)	ODR-HUB 																						
+Przeznaczenie pola tzw. rozmiaru okna (Window size) w datagramie TCP	16-bitowe pole używane przez komputer docelowy w celu poinformowania komputera źródłowego o tym, ile danych jest gotów przyjąć w jednym segmencie TCP.																						
+i	PIM push-mode																						
+Pełna nazwa pola w datagramie IP umożliwiającego przenoszenie informacji na temat QoS	DSCP/ECN																						
+Przynajmniej 4 rodzaje obszarów (area) definiowanych wewnątrz domeny OSFP i w ramach tego protokołu	backbone, standard, stub, totally stubby areas																						
+Przeznaczenie technologii IP SLA (Sevice Level Agreement) użytkowanej w systemach operacyjnych dla ruterów IP	monitorowanie infrastruktury wykorzystywanej w procesach rutowania IP oraz podejmowanie zaprogramowanych akcji po wykryciu określonego jej stanu																						
+Rozwinicie akronimów IRB oraz CRB jako technologii mostkowania ruchu sieciowego w ruterach Cisco	Integrated Routing and Bridging, Concurrent Routing and Bridging																						
+Nazwa wyróżnionego rutera IP multicast przechowującego informacj o grupach multicast w IP PIM sparse mode	Rendezvous Point																						
+Nazwa iterfejsu ATM tworzonego pomidzy dwoma przełącznikami ATM (w przeciwiestwie do interfejsu pomidzy przełącznikiem ATM i ruterem IP)	NNI - Network-Network Interface																						
+Liczba bitów w adresie IPv4 klasy B, przyznaczonych do określenia adresu hosta w sieci IP	16																						
+Nazwa techniki (w Cisco IOS) umożliwiającej wykorzystywanie list kontrolnych (ACL) do kontroli procesu rutowania dynamicznego	route-map																						
+																							
+Przynajmniej trzy nazwy szyfrów symetrycznych (tj. używających klucza symetrycznego) stosowanych w technologiach sieciowych	AES DES IDEA																						
+Maksymalna liczba aktywnych stacji typu slave w jednej pikosieci Bluetooth (IEE 802.15)	7																						
+Co oznacza akronim SSID ww technologii IEEE 802.11 (wystarczyło rozwinąć skrót)	service set identifier																						
+Interfejs telefonii analogowej do której podłączamy interfejs FXO	FXS																						
+Alternatywa dla protokołu IGMP stosowana w przypadku zarządzania grupami IPv6 multicast	MLD																						
+Grupa datagramów wysyłanych i rozpatrywanych jednocześnie przez MPLS	 																						
+Router MPLS wysyłający datagramy	Upstream Router																						
+Sieć VRF działająca bez MPLS	VRF Lite																						
+Protokoły używane do budowania VPN	PPTP, L2TP																						
+Cel użycia GRE (general routing encapsulation)	Łączenie zdalnych sieci stosujących protokoły inne niż IP, przesyłanie ruchu IPv6 przez sieć IPv4, przesyłanie ruchu szyfrowanego. (końcówka wykładu ROUTE (II)																						
+Akronim dla synchronicznych sieci optycznych	SONET																						
