@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOiTZO_program_liniowy", "BOiTZO_program_liniowy\BOiTZO_program_liniowy.csproj", "{EE3F8DF4-9C7B-40CE-A4C7-A97E629D37A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE3F8DF4-9C7B-40CE-A4C7-A97E629D37A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE3F8DF4-9C7B-40CE-A4C7-A97E629D37A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE3F8DF4-9C7B-40CE-A4C7-A97E629D37A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE3F8DF4-9C7B-40CE-A4C7-A97E629D37A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {807E33FC-9D8B-4A34-B07F-148860353FB7}
+	EndGlobalSection
+EndGlobal
