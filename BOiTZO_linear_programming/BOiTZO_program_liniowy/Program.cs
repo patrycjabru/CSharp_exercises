@@ -13,23 +13,24 @@ namespace BOiTZO_linear_programming
 		{
 			DataReader.ReadDataFromFile();
 			DataReader.Deserialize();
-			//Console.WriteLine(DataReader.DeserializedData.InequtionsFators[0,0]);
 			Calculations calculations = new Calculations(DataReader.DeserializedData);
 			calculations.FromLinearToDual();
 			Result.CrossingPoints = calculations.CalculateCrossingPoints();
 			calculations.CalculateValuesToPoints(Result.CrossingPoints);
 			Result.LimitingLines = calculations.CalculateLimitingLines(Result.CrossingPoints);
 			Result.LimitingPoints = calculations.CalculateLimitingPoints(Result.CrossingPoints, Result.LimitingLines);
-			Console.WriteLine(Result.LimitingLines);
 			foreach (Point p in Result.CrossingPoints)
 				Console.WriteLine(p);
-			Result.GreatestValue = calculations.FindTheGreatestValue(Result.LimitingPoints);
-			//calculations.SetNonUsedVariablesToZero(Result.GreatestValue);
-			Tuple<double,double> solvedEquations = calculations.SolveSystemOfEquations(Result.LimitingLines);
-			Result.Variables = calculations.CalculateFinalValues(solvedEquations, Result.GreatestValue);
-			Console.WriteLine(Result.ToString());
+			Console.WriteLine();
+			//foreach (Point p in Result.LimitingPoints)
+			//	Console.WriteLine(p);
 			//Console.WriteLine();
-			//Console.WriteLine(Result.LimitingPoints[0]);
+			Console.WriteLine(Result.LimitingLines.Item1);
+			Console.WriteLine(Result.LimitingLines.Item2);
+			Result.LowestValue = calculations.FindTheLowestValue(Result.LimitingPoints);
+			Tuple<double,double> solvedEquations = calculations.SolveSystemOfEquations(Result.LimitingLines);
+			Result.Variables = calculations.CalculateFinalValues(solvedEquations, Result.LowestValue);
+			Console.WriteLine(Result.ToString());
 			Console.ReadKey();
 		}
 	}
@@ -53,14 +54,14 @@ namespace BOiTZO_linear_programming
 		}
 		public override string ToString()
 		{
-			return string.Concat("x=", X, ", y=", Y, ", value=", Value, ", lines: ",FirstLineNumber, ", ",SecondLineNumber);
+			return string.Concat("x=", X, ",	y=", Y, ",	value=", Value, ",	lines: ",FirstLineNumber, ",	",SecondLineNumber);
 		}
 	}
 	class Result
 	{
 		public static List<Point> CrossingPoints { get; set; } = new List<Point>();
 		public static List<Point> LimitingPoints { get; set; } = new List<Point>();
-		public static Point GreatestValue { get; set; }
+		public static Point LowestValue { get; set; }
 		public static List<double> Variables { get; set; } = new List<double>();
 		public static Tuple<int, int> LimitingLines { get; set; }
 		public new static string ToString()
@@ -72,9 +73,9 @@ namespace BOiTZO_linear_programming
 				output += p.ToString() + "\n";
 			}
 			output += "Punkt optimum:\n";
-			output += GreatestValue.ToString();
+			output += LowestValue.ToString();
 			output += "\n";
-			output += "Wartość optimum: " + GreatestValue.Value;
+			output += "Wartość optimum: " + LowestValue.Value;
 			output += "\nWartości zmiennych: \n";
 			foreach (double d in Variables)
 			{
@@ -112,16 +113,6 @@ namespace BOiTZO_linear_programming
 
 			dualInequation.AimEquationFactors.Add(linearInequation.FirstValue);
 			dualInequation.AimEquationFactors.Add(linearInequation.SecondValue);
-			//for (int i = 0; i < 4; i++)
-			//{
-			//	for (int j = 0; j < 2; j++)
-			//	{
-			//		Console.Write("  "+dualInequation.InequtionsFators[i,j]);
-			//	}
-			//	Console.WriteLine();
-			//}
-			foreach (double a in dualInequation.LeftValues)
-				Console.WriteLine(a);
 		}
 		public List<Point> CalculateCrossingPoints()
 		{
@@ -130,21 +121,19 @@ namespace BOiTZO_linear_programming
 			{
 				for (int j = 0; j < dualInequation.InequtionsFators.GetLength(0); j++)
 				{
-					//Console.WriteLine(dualInequation.InequtionsFators.GetLength(0));
 					double A1 = dualInequation.InequtionsFators[i, 0];
 					double A2 = dualInequation.InequtionsFators[i, 1];
 					double B1 = dualInequation.InequtionsFators[j, 0];
 					double B2 = dualInequation.InequtionsFators[j, 1];
-					//Console.WriteLine("    " + A1 + " " + A2 + " " + B1 + " " + B2);
 					double delta = A1 * B2 - A2 * B1;
 					if (delta == 0) continue;
 
 					double C1 = dualInequation.LeftValues[i];
 					double C2 = dualInequation.LeftValues[j];
-					//Console.WriteLine(C1 + "  " + C2);
+
 					double x = (B2 * C1 - A2 * C2) / delta;
 					double y = (A1 * C2 - B1 * C1) / delta;
-					//Console.WriteLine(x+" "+y+" "+i+" "+j);
+					
 					if (x < 0 || y < 0) continue;
 					foundPoints.Add(new Point(x, y, i, j));
 				}
@@ -163,7 +152,7 @@ namespace BOiTZO_linear_programming
 
 				double x = (B2 * C1 - A2 * C2) / delta;
 				double y = (A1 * C2 - B1 * C1) / delta;
-				//Console.WriteLine(x + " " + y + " " + i + " " + -1);
+				
 				if (x < 0 || y < 0) continue;
 				foundPoints.Add(new Point(x, y, i, -1));
 			}
@@ -181,7 +170,7 @@ namespace BOiTZO_linear_programming
 
 				double x = (B2 * C1 - A2 * C2) / delta;
 				double y = (A1 * C2 - B1 * C1) / delta;
-				//Console.WriteLine(x + " " + y + " " + i + " " + -1);
+				
 				if (x < 0 || y < 0) continue;
 				foundPoints.Add(new Point(x, y, i, -1));
 			}
@@ -191,8 +180,6 @@ namespace BOiTZO_linear_programming
 		{
 			List<Point> pointsOnXAxe = new List<Point>();
 			List<Point> pointsOnYAxe = new List<Point>();
-			foreach (Point p in crossingPoints)
-				Console.WriteLine(p);
 			foreach(Point p in crossingPoints)
 			{
 				if (p.X == 0 && p.SecondLineNumber == -1)
@@ -201,20 +188,19 @@ namespace BOiTZO_linear_programming
 					pointsOnYAxe.Add(p);
 			}
 			Point limitingXPoint = new Point();
-			limitingXPoint.X = double.MaxValue;
+			limitingXPoint.X = double.MinValue;
 			foreach (Point p in pointsOnYAxe)
 			{
-				if (p.X < limitingXPoint.X)
+				if (p.X > limitingXPoint.X)
 					limitingXPoint = p;
 			}
 			Point limitingYPoint = new Point();
-			limitingYPoint.Y = double.MaxValue;
+			limitingYPoint.Y = double.MinValue;
 			foreach (Point p in pointsOnXAxe)
 			{
-				if (p.Y < limitingYPoint.Y)
+				if (p.Y > limitingYPoint.Y)
 					limitingYPoint = p;
 			}
-			Console.WriteLine("xxxxx" + limitingXPoint + "     " + limitingYPoint + "       " + limitingXPoint.FirstLineNumber + "        " + limitingYPoint.SecondLineNumber);
 			Tuple<int, int> limitingLines = new Tuple<int, int>(limitingXPoint.FirstLineNumber,limitingYPoint.FirstLineNumber);
 			return limitingLines;
 		} 
@@ -239,31 +225,27 @@ namespace BOiTZO_linear_programming
 				p.Value = dualInequation.AimEquationFactors[0] * p.X + dualInequation.AimEquationFactors[1] * p.Y;
 			}
 		}
-		public Point FindTheGreatestValue(List<Point> points)
+		public Point FindTheLowestValue(List<Point> points)
 		{
-			Point greatestValuePoint = points[0];
+			Point lowestValuePoint = points[0];
 			foreach(Point p in points)
 			{
-				if (p.Value > greatestValuePoint.Value)
+				if (p.Value < lowestValuePoint.Value)
 
-					greatestValuePoint = p;
+					lowestValuePoint = p;
 			}
-			return greatestValuePoint;
+			return lowestValuePoint;
 		}
 		public Tuple<double,double> SolveSystemOfEquations(Tuple<int,int> limitingLines)
 		{
 			int numberOfFirstVariable = limitingLines.Item1;
 			int numberOfSecondVariable = limitingLines.Item2;
-			if(numberOfFirstVariable>numberOfSecondVariable)
+			if(numberOfFirstVariable<numberOfSecondVariable)
 			{
 				numberOfFirstVariable = limitingLines.Item2;
 				numberOfSecondVariable = limitingLines.Item1;
 			}
 
-			//Console.WriteLine(linearInequation.InequtionsFators.GetLength(0));
-			//Console.WriteLine(linearInequation.InequtionsFators.GetLength(1));
-			Console.WriteLine(numberOfFirstVariable);
-			Console.WriteLine(numberOfSecondVariable);
 			double A1 = linearInequation.InequtionsFators[0, numberOfFirstVariable];
 			double A2 = linearInequation.InequtionsFators[0, numberOfSecondVariable];
 			double B1 = linearInequation.InequtionsFators[1, numberOfFirstVariable];
@@ -304,10 +286,6 @@ namespace BOiTZO_linear_programming
 	class DualInequations
 	{
 		public double[,] InequtionsFators { get; set; }
-		//public double FirstValue { get; set; }
-		//public double SecondValue { get; set; }
-		//public double ThirdValue{ get; set; }
-		//public double ForthValue { get; set; }
 		public List<double> LeftValues { get; set; }
 		public List<double> AimEquationFactors { get; set; }
 	}
