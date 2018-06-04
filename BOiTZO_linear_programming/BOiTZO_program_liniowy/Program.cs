@@ -174,7 +174,29 @@ namespace BOiTZO_linear_programming
 				if (x < 0 || y < 0) continue;
 				foundPoints.Add(new Point(x, y, i, -1));
 			}
+			foundPoints = removeDuplicatedPoints(foundPoints);
 			return foundPoints;
+		}
+		private List<Point> removeDuplicatedPoints(List<Point> points)
+		{
+			List<Point> noDuplicates = new List<Point>();
+			foreach (Point p in points)
+			{
+				bool isDuplicate = false;
+				foreach (Point d in noDuplicates)
+				{
+					if (p.X == d.X && p.Y == d.Y && p.SecondLineNumber != -1 && d.SecondLineNumber != -1)
+					{
+						isDuplicate = true;
+						break;
+					}
+				}
+				if (!isDuplicate)
+					noDuplicates.Add(p);
+			}
+			foreach (Point p in noDuplicates)
+				Console.WriteLine(p);
+			return noDuplicates;
 		}
 		public Tuple<int,int> CalculateLimitingLines(List<Point> crossingPoints)
 		{
@@ -209,13 +231,33 @@ namespace BOiTZO_linear_programming
 			List<Point> limitingPoints = new List<Point>();
 			foreach(Point p in points)
 			{
-				if (p.FirstLineNumber == lines.Item1 && p.Y == 0)
-					limitingPoints.Add(p);
-				else if (p.FirstLineNumber == lines.Item2 && p.X == 0)
-					limitingPoints.Add(p);
-				else if (p.FirstLineNumber == lines.Item1 && p.SecondLineNumber == lines.Item2)
+				//if (p.FirstLineNumber == lines.Item1 && p.Y == 0)
+				//	limitingPoints.Add(p);
+				//else if (p.FirstLineNumber == lines.Item2 && p.X == 0)
+				//	limitingPoints.Add(p);
+				//else if (p.FirstLineNumber == lines.Item1 && p.SecondLineNumber == lines.Item2)
+				//	limitingPoints.Add(p);
+				int numberOfConditionsPassed = 0;
+				for (int i = 0; i< dualInequation.InequtionsFators.GetLength(0); i++)
+				{
+					Console.WriteLine("==================");
+					//Console.WriteLine(dualInequation.InequtionsFators[i, 0]);
+					Console.WriteLine("x: "+p.X+ "	y: " + p.Y+ "	wynik: "+ (dualInequation.InequtionsFators[i, 0] * p.X + dualInequation.InequtionsFators[i, 1] * p.Y));
+					//Console.WriteLine(dualInequation.InequtionsFators[i, 1]);
+					//Console.WriteLine();
+					Console.WriteLine("porownanie z: "+dualInequation.LeftValues[i]);
+					double calculatedValue = dualInequation.InequtionsFators[i, 0] * p.X + dualInequation.InequtionsFators[i, 1] * p.Y;
+					if (calculatedValue >= 0.99*dualInequation.LeftValues[i])
+						numberOfConditionsPassed++;
+				}
+				int amountOfValues = dualInequation.InequtionsFators.GetLength(0);
+				if (numberOfConditionsPassed == amountOfValues)
 					limitingPoints.Add(p);
 			}
+			Console.WriteLine("aaaaaaaaaaaaaaaa");
+			foreach (Point p in limitingPoints)
+				Console.WriteLine(p);
+			Console.WriteLine("aaaaaaaaaaaaaaaa");
 			return limitingPoints;
 		}
 		public void CalculateValuesToPoints(List<Point> points)
@@ -240,7 +282,7 @@ namespace BOiTZO_linear_programming
 		{
 			int numberOfFirstVariable = limitingLines.Item1;
 			int numberOfSecondVariable = limitingLines.Item2;
-			if(numberOfFirstVariable<numberOfSecondVariable)
+			if(numberOfFirstVariable>numberOfSecondVariable)
 			{
 				numberOfFirstVariable = limitingLines.Item2;
 				numberOfSecondVariable = limitingLines.Item1;
