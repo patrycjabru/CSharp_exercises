@@ -19,14 +19,14 @@ namespace BOiTZO_linear_programming
 			calculations.CalculateValuesToPoints(Result.CrossingPoints);
 			Result.LimitingLines = calculations.CalculateLimitingLines(Result.CrossingPoints);
 			Result.LimitingPoints = calculations.CalculateLimitingPoints(Result.CrossingPoints, Result.LimitingLines);
-			foreach (Point p in Result.CrossingPoints)
-				Console.WriteLine(p);
-			Console.WriteLine();
+			//foreach (Point p in Result.CrossingPoints)
+			//	Console.WriteLine(p);
+			//Console.WriteLine();
 			//foreach (Point p in Result.LimitingPoints)
 			//	Console.WriteLine(p);
 			//Console.WriteLine();
-			Console.WriteLine(Result.LimitingLines.Item1);
-			Console.WriteLine(Result.LimitingLines.Item2);
+			//Console.WriteLine(Result.LimitingLines.Item1);
+			//Console.WriteLine(Result.LimitingLines.Item2);
 			Result.LowestValue = calculations.FindTheLowestValue(Result.LimitingPoints);
 			Tuple<double,double> solvedEquations = calculations.SolveSystemOfEquations(Result.LimitingLines);
 			Result.Variables = calculations.CalculateFinalValues(solvedEquations, Result.LowestValue);
@@ -54,7 +54,8 @@ namespace BOiTZO_linear_programming
 		}
 		public override string ToString()
 		{
-			return string.Concat("x=", X, ",	y=", Y, ",	value=", Value, ",	lines: ",FirstLineNumber, ",	",SecondLineNumber);
+			//return string.Concat("x=", X, ",	y=", Y, ",	value=", Value, ",	lines: ",FirstLineNumber, ",	",SecondLineNumber);
+			return "(" + X + "," + Y + ")";
 		}
 	}
 	class Result
@@ -70,17 +71,16 @@ namespace BOiTZO_linear_programming
 			output += "Punkty ograniczające: \n";
 			foreach (Point p in LimitingPoints)
 			{
-				output += p.ToString() + "\n";
+				output += p.ToString() + " ";
 			}
-			output += "Punkt optimum:\n";
-			output += LowestValue.ToString();
 			output += "\n";
-			output += "Wartość optimum: " + LowestValue.Value;
-			output += "\nWartości zmiennych: \n";
+			output += "Punkt optimum: V = (";
 			foreach (double d in Variables)
 			{
 				output += d.ToString() + "  ";
 			}
+			output += ") realizujący optimum PP\n";
+			output += "Wartość maksymalna: " + LowestValue.Value;
 			return output;
 		}
 	}
@@ -194,8 +194,8 @@ namespace BOiTZO_linear_programming
 				if (!isDuplicate)
 					noDuplicates.Add(p);
 			}
-			foreach (Point p in noDuplicates)
-				Console.WriteLine(p);
+			//foreach (Point p in noDuplicates)
+			//	Console.WriteLine(p);
 			return noDuplicates;
 		}
 		public Tuple<int,int> CalculateLimitingLines(List<Point> crossingPoints)
@@ -240,12 +240,12 @@ namespace BOiTZO_linear_programming
 				int numberOfConditionsPassed = 0;
 				for (int i = 0; i< dualInequation.InequtionsFators.GetLength(0); i++)
 				{
-					Console.WriteLine("==================");
+					//Console.WriteLine("==================");
 					//Console.WriteLine(dualInequation.InequtionsFators[i, 0]);
-					Console.WriteLine("x: "+p.X+ "	y: " + p.Y+ "	wynik: "+ (dualInequation.InequtionsFators[i, 0] * p.X + dualInequation.InequtionsFators[i, 1] * p.Y));
+					//Console.WriteLine("x: "+p.X+ "	y: " + p.Y+ "	wynik: "+ (dualInequation.InequtionsFators[i, 0] * p.X + dualInequation.InequtionsFators[i, 1] * p.Y));
 					//Console.WriteLine(dualInequation.InequtionsFators[i, 1]);
 					//Console.WriteLine();
-					Console.WriteLine("porownanie z: "+dualInequation.LeftValues[i]);
+					//Console.WriteLine("porownanie z: "+dualInequation.LeftValues[i]);
 					double calculatedValue = dualInequation.InequtionsFators[i, 0] * p.X + dualInequation.InequtionsFators[i, 1] * p.Y;
 					if (calculatedValue >= 0.99*dualInequation.LeftValues[i])
 						numberOfConditionsPassed++;
@@ -254,10 +254,10 @@ namespace BOiTZO_linear_programming
 				if (numberOfConditionsPassed == amountOfValues)
 					limitingPoints.Add(p);
 			}
-			Console.WriteLine("aaaaaaaaaaaaaaaa");
-			foreach (Point p in limitingPoints)
-				Console.WriteLine(p);
-			Console.WriteLine("aaaaaaaaaaaaaaaa");
+			//Console.WriteLine("aaaaaaaaaaaaaaaa");
+			//foreach (Point p in limitingPoints)
+			//	Console.WriteLine(p);
+			//Console.WriteLine("aaaaaaaaaaaaaaaa");
 			return limitingPoints;
 		}
 		public void CalculateValuesToPoints(List<Point> points)
